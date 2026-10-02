@@ -15,9 +15,9 @@ require("noice").setup({
             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
             ["vim.lsp.util.stylize_markdown"] = true,
         },
-        -- Show LSP progress (e.g. "Angular: initializing…") so you know when
-        -- the language server is ready to give completions.
-        progress = { enabled = true },
+        -- LSP progress is handled by fidget.nvim (more visible), so keep it off
+        -- here to avoid showing it twice.
+        progress = { enabled = false },
     },
     presets = {
         -- Floating command line + completion as one centered popup, like the

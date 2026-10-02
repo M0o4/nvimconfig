@@ -17,6 +17,14 @@
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim"
     },
+    "copilot.lua": {
+      "rev": "9c8b172570105d31ff707cb0d62897f79c2ddb1f",
+      "src": "https://github.com/zbirenbaum/copilot.lua"
+    },
+    "fidget.nvim": {
+      "rev": "9e0201673e08e997e7cf52afca5565c70bd117f3",
+      "src": "https://github.com/j-hui/fidget.nvim"
+    },
     "flash.nvim": {
       "rev": "5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a",
       "src": "https://github.com/folke/flash.nvim"

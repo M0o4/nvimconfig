@@ -4,5 +4,4 @@ require("autocmd")
 require("config")
 require("keymap")
 
-vim.cmd.colorscheme "tokyonight"
-
+vim.cmd.colorscheme("tokyonight")
