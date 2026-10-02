@@ -11,6 +11,9 @@ local opts = { noremap = true, silent = true }
 
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 
+-- Show usages / references of the symbol under the cursor (in a Trouble list).
+vim.keymap.set("n", "gr", "<cmd>Trouble lsp_references toggle<cr>", { desc = "References (usages)" })
+
 -- Format with prettier (conform); falls back to LSP formatting if no prettier.
 vim.keymap.set("n", "<Leader>fo", function()
     require("conform").format({ async = true, lsp_format = "fallback" })
