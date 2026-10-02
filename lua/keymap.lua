@@ -51,3 +51,6 @@ vim.keymap.set("n", "n", "nzz", { desc = "Find next" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Find prev" })
 vim.keymap.set("n", "{", "{zz", { desc = "Go to prev whitespace" })
 vim.keymap.set("n", "}", "}zz", { desc = "Go to next whitespace" })
+
+-- Window/pane navigation is handled by vim-tmux-navigator (<C-h/j/k/l>),
+-- which also crosses into tmux panes. See lua/plugins/tmux-navigator.lua.
