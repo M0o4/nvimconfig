@@ -40,6 +40,15 @@ require('blink.cmp').setup({
             preset = 'inherit',
             ['<CR>'] = { 'accept_and_enter', 'fallback' },
         },
+        completion = {
+            -- Show the completion menu automatically as you type in cmdline
+            -- (off by default in blink).
+            menu = { auto_show = true },
+            -- Do not auto-highlight the first item, so <CR> runs what YOU typed
+            -- (e.g. :w) instead of the suggestion (:wqall). Navigate with <C-j>/
+            -- <C-k> (or <Tab>) to pick a completion, then <CR> accepts it.
+            list = { selection = { preselect = false } },
+        },
     },
 
     sources = { default = { "lsp", "snippets", "path" } }
