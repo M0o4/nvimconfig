@@ -20,6 +20,7 @@ require("conform").setup({
         yaml = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
+        go = { "goimports", "gofmt" },
     },
     -- Format automatically on save. For filetypes without a formatter above
     -- (e.g. rust), it falls back to the LSP formatter if the server has one.

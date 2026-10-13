@@ -25,6 +25,10 @@ local langs = {
     "rust",
     "regex",
     "query",
+    "go",
+    "gomod",
+    "gosum",
+    "gowork",
 }
 
 -- Install/compile parsers (async; no-op for ones already present).

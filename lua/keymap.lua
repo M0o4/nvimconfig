@@ -14,6 +14,12 @@ vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 -- Show usages / references of the symbol under the cursor (in a Trouble list).
 vim.keymap.set("n", "gr", "<cmd>Trouble lsp_references toggle<cr>", { desc = "References (usages)" })
 
+-- Show available code actions (quick fixes, imports, refactors) under cursor.
+vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+
+-- Hover docs for the symbol under the cursor.
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
+
 -- Format with prettier (conform); falls back to LSP formatting if no prettier.
 vim.keymap.set("n", "<Leader>fo", function()
     require("conform").format({ async = true, lsp_format = "fallback" })
@@ -54,3 +60,10 @@ vim.keymap.set("n", "}", "}zz", { desc = "Go to next whitespace" })
 
 -- Window/pane navigation is handled by vim-tmux-navigator (<C-h/j/k/l>),
 -- which also crosses into tmux panes. See lua/plugins/tmux-navigator.lua.
+
+-- vim-test: run tests from the editor.
+vim.keymap.set("n", "<leader>tn", "<cmd>TestNearest<cr>", { desc = "Test nearest" })
+vim.keymap.set("n", "<leader>tf", "<cmd>TestFile<cr>", { desc = "Test file" })
+vim.keymap.set("n", "<leader>ts", "<cmd>TestSuite<cr>", { desc = "Test suite" })
+vim.keymap.set("n", "<leader>tl", "<cmd>TestLast<cr>", { desc = "Test last" })
+vim.keymap.set("n", "<leader>tv", "<cmd>TestVisit<cr>", { desc = "Go to last test file" })

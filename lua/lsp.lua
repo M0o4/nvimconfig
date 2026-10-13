@@ -5,6 +5,8 @@ vim.lsp.enable({
   "vtsls",
   "eslint",
   "jsonls",
+  "tailwindcss",
+  "gopls",
 })
 
 vim.diagnostic.config({ virtual_text = true })

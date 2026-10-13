@@ -7,7 +7,7 @@ require('blink.cmp').setup({
     signature = { enabled = true },
     keymap = {
         preset = "default",
-        ["<C-space>"] = {},
+        ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-p>"] = {},
         ["<Tab>"] = {},
         ["<S-Tab>"] = {},
