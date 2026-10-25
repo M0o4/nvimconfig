@@ -20,6 +20,11 @@ vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Co
 -- Hover docs for the symbol under the cursor.
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
 
+-- Toggle inlay hints (type/parameter hints).
+vim.keymap.set("n", "<leader>ih", function()
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "Toggle inlay hints" })
+
 -- Format with prettier (conform); falls back to LSP formatting if no prettier.
 vim.keymap.set("n", "<Leader>fo", function()
     require("conform").format({ async = true, lsp_format = "fallback" })
