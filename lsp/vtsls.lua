@@ -55,5 +55,22 @@ return {
                 variableTypes = { enabled = false },
             },
         },
+        -- Same settings for plain JS / React (.js, .jsx) files, since vtsls
+        -- reads inlay-hint and suggest settings from the `javascript.*` branch
+        -- for those, not `typescript.*`.
+        javascript = {
+            updateImportsOnFileMove = { enabled = 'always' },
+            suggest = {
+                completeFunctionCalls = true,
+            },
+            inlayHints = {
+                enumMemberValues = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                parameterNames = { enabled = 'literals' },
+                parameterTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                variableTypes = { enabled = false },
+            },
+        },
     },
 }

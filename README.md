@@ -1,7 +1,7 @@
 # Neovim IDE config
 
 Конфиг Neovim **0.12.5** под веб-разработку: в первую очередь **Angular**, плюс
-**Vue 3**, **Go**, **Rust**, **Lua**.
+**React** (TSX/JSX), **Vue 3**, **Go**, **Rust**, **Lua**.
 
 Особенности сетапа:
 
@@ -24,7 +24,7 @@ Leader — `<Space>`.
 
 | Язык | Сервер | Файл |
 |------|--------|------|
-| TypeScript / JS | `vtsls` | [`lsp/vtsls.lua`](lsp/vtsls.lua) |
+| TypeScript / JS / React (TSX/JSX) | `vtsls` | [`lsp/vtsls.lua`](lsp/vtsls.lua) |
 | Angular templates | `angular-language-server` (ngserver) | [`lsp/angular-language-server.lua`](lsp/angular-language-server.lua) |
 | ESLint | `vscode-eslint-language-server` | [`lsp/eslint.lua`](lsp/eslint.lua) |
 | Tailwind CSS | `tailwindcss-language-server` | [`lsp/tailwindcss.lua`](lsp/tailwindcss.lua) |
@@ -35,6 +35,10 @@ Leader — `<Space>`.
 | Lua | `lua_ls` | [`lsp/lua_ls.lua`](lsp/lua_ls.lua) |
 
 Фишки:
+- **React (TSX/JSX)** — покрывается TS/JS-стеком: vtsls (типы, автоимпорты,
+  inlay hints в `.tsx`/`.jsx`), подсветка treesitter (`tsx`/`javascript`),
+  авто-закрытие и переименование JSX-тегов (ts-autotag), Tailwind-подсказки в
+  `className`, prettier + eslint. Отдельный сервер не нужен.
 - **Vue hybrid mode** — Volar разбирает `.vue`, а TypeScript внутри делегируется
   в vtsls через `@vue/typescript-plugin`.
 - **Tailwind в Angular** — подсказки классов работают и в `.html`, и внутри
