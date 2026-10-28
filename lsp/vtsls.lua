@@ -7,6 +7,7 @@ return {
         'typescript',
         'typescriptreact',
         'typescript.tsx',
+        'vue',
     },
     root_markers = {
         'tsconfig.json',
@@ -23,6 +24,20 @@ return {
                 maxInlayHintLength = 30,
                 completion = {
                     enableServerSideFuzzyMatch = true,
+                },
+            },
+            -- Vue 3 hybrid mode: let vtsls handle TypeScript inside .vue files
+            -- via the Vue TS plugin, while vue_ls handles the template/SFC.
+            tsserver = {
+                globalPlugins = {
+                    {
+                        name = '@vue/typescript-plugin',
+                        location = vim.fn.stdpath('data')
+                            .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                        languages = { 'vue' },
+                        configNamespace = 'typescript',
+                        enableForWorkspaceTypeScriptVersions = true,
+                    },
                 },
             },
         },

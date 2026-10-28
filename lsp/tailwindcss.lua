@@ -10,6 +10,7 @@ return {
         'javascriptreact',
         'typescript',
         'typescriptreact',
+        'vue',
     },
     root_markers = {
         'tailwind.config.js',
@@ -32,6 +33,7 @@ return {
                 htmlangular = 'html',
                 typescript = 'javascript',
                 typescriptreact = 'javascript',
+                vue = 'html',
             },
             classAttributes = {
                 'class',

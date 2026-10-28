@@ -29,6 +29,7 @@ local langs = {
     "gomod",
     "gosum",
     "gowork",
+    "vue",
 }
 
 -- Install/compile parsers (async; no-op for ones already present).
